@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Post = mongoose.model('Post', {
     user: {
         type : mongoose.ObjectId,
-       // required : true,
+        required : true,
         ref: 'User'
     },
     description: String,
@@ -11,6 +11,7 @@ const Post = mongoose.model('Post', {
         type : String,
         required : true
     },
+    lokes: [mongoose.ObjectId],
     createdAt: {
         type: Date,
         required: true,
